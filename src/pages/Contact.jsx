@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import React from 'react'
 import Navbar from '../Components/Navbar'
 import Validation from '../Components/Validation';
+import Footer from '../Components/Footer';
 
 
 const Container = styled.div`
@@ -55,15 +56,16 @@ const Button = styled.button`
 
 const Contact = () => {
   return (
+    <>
+    <Navbar/>
     <Container>
     <Wrapper>
-      
     <Title>CONTACT US</Title>
    <Validation/>  
- 
     </Wrapper>        
     </Container>
-  )
+    <Footer/>
+</>  )
 }
 
 export default Contact
