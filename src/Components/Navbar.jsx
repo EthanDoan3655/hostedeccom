@@ -3,20 +3,14 @@ import Badge from '@mui/material/Badge';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import styled from 'styled-components'
 import { mobile } from '../pages/responsive';
-import { Navigate, useNavigate } from "react-router-dom";
-import { Button } from '@mui/material';
+import { BrowserRouter, Navigate, useNavigate } from "react-router-dom";
+import { Button, MenuList } from '@mui/material';
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
 import ProductList from '../pages/ProductList';
 import { BrowserRouter as Router, Routes, Route,Link} from "react-router-dom";
+import Cart from '../pages/Cart';
 
-const navigateHome = () => {
-  Navigate('/');
-};
-
-const navigateToContacts = ()=>{
-  Navigate('/Contact')
-}
 
 
 const Container = styled.div`
@@ -101,7 +95,7 @@ const Navbar = () => {
             </Logo>
         </Center>
           <Right>
-            <ul style={{display: "flex"}}>
+          <ul style={{display: "flex"}}>
                 <li style={{display: "flex"}}>
                   <Link style={{textDecoration: 'none', color: "black", fontSize: "20px", marginRight: "20px"}} to="/">Home</Link>
                 </li>
@@ -116,7 +110,8 @@ const Navbar = () => {
                   <Badge badgeContent={4} color='primary' size="15px">
       <ShoppingCartOutlinedIcon />
              </Badge>
-             </MenuItem>
+             </li>
+             </ul>
           </Right>
         </Wrapper>
     </Container>
