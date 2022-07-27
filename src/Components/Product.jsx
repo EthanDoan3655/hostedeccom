@@ -96,8 +96,8 @@ const Product = () => {
                {/* {console.log("in product")}
                {console.log(products)} */}
      <Container>
-        <Circle/>
-        {/* <Image src={item.img}/> */}
+          {/* <Circle/>
+       
         <Info>
             <Icon>
                 <ShoppingCartOutlined/>
@@ -108,7 +108,7 @@ const Product = () => {
             <Icon>
                 <FavoriteBorderOutlined/>
             </Icon>
-        </Info>
+        </Info> */}
     </Container>
     </>
   )
