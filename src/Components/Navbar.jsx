@@ -8,7 +8,7 @@ import { Button } from '@mui/material';
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
 import ProductList from '../pages/ProductList';
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route,Link} from "react-router-dom";
 
 const navigateHome = () => {
   Navigate('/');
@@ -101,11 +101,19 @@ const Navbar = () => {
             </Logo>
         </Center>
           <Right>
-              <MenuItem>HOME</MenuItem>
-              <MenuItem>PRODUCTS</MenuItem>
-              <MenuItem>CONTACT</MenuItem>
-              <MenuItem>
-              <Badge badgeContent={4} color="primary">
+            <ul style={{display: "flex"}}>
+                <li style={{display: "flex"}}>
+                  <Link style={{textDecoration: 'none', color: "black", fontSize: "20px", marginRight: "20px"}} to="/">Home</Link>
+                </li>
+                <li style={{ display: "flex"}}>
+                  <Link style={{textDecoration: 'none', color: "black", fontSize: "20px", marginRight: "20px"}} to="/productlist">Products</Link>
+                </li>
+                <li style={{display: "flex"}}>
+                  <Link style={{textDecoration: 'none', color: "black", fontSize: "20px", paddingRight: "100px"}} to="/contact">Contact</Link>
+                </li>
+                <li style={{display: "flex"}}>
+                  <Link style={{textDecoration: 'underline', color: "black", fontSize: "20px", paddingLeft: "5%" }} to="/cart">Cart</Link>
+                  <Badge badgeContent={4} color='primary' size="15px">
       <ShoppingCartOutlinedIcon />
              </Badge>
              </MenuItem>
